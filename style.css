@@ -21,11 +21,8 @@ body::-webkit-scrollbar {
 }
 
 #coverText {
-    width: 55%;
-    font-size: 20px;
     color: aliceblue;
     float: left;
-    line-height: 1.5;
     font-weight: 500;
     margin: 0;
     position: absolute;
@@ -54,46 +51,33 @@ body::-webkit-scrollbar {
     border-width: 5px;
 }
 
-/* .reasons {
-    margin: 0 auto;
-    min-height: fit-content;
-    display: grid;
-    grid-gap: 1rem;
-}
-
-.reason {
-    min-height: fit-content;
-    background-color: rgba(38, 38, 38, 0.7);
-    padding: 1rem;
-}
-
-.card {
-    min-height: 100%;
-}
-
-.reason:hover {
-    box-shadow: 0 15px 1px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
-} */
-
-@media (min-width: 100px) {
-    .coverRow {
+@media only screen and (max-width: 700px) {
+    .container {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .section {
-        grid-template-columns: repeat(1, 1fr);
+    #coverText {
+
+        width: 100vw;
+    }
+
+    .cText {
+        font-size: 5vw;
     }
 }
 
 /* Screen larger than 900px */
 @media (min-width: 900px) {
-    .coverRow {
+    .container {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .section {
-        grid-template-columns: repeat(4, 1fr);
+    #coverText {
+        width: 50vw;
+    }
+
+    .cText {
+        font-size: 2vw;
     }
 }
 
@@ -104,7 +88,9 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 40px 0;
+    max-width: 100vh;
+    display: grid;
+    gap: 1rem;
 }
 
 .container .card {
@@ -114,7 +100,7 @@ body::-webkit-scrollbar {
     background: rgba(255, 255, 255, 0.1);
     margin: 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    border-radius: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
